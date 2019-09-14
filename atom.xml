@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>一水之间</title>
+  
+  <subtitle>所谓伊人 在水一方</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://www.chenjianhui.cc/"/>
+  <updated>2019-09-12T12:28:41.891Z</updated>
+  <id>https://www.chenjianhui.cc/</id>
+  
+  <author>
+    <name>Chen Jianhui</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello Hexo</title>
+    <link href="https://www.chenjianhui.cc/2019/09/12/hello-hexo/"/>
+    <id>https://www.chenjianhui.cc/2019/09/12/hello-hexo/</id>
+    <published>2019-09-12T08:05:03.000Z</published>
+    <updated>2019-09-12T12:28:41.891Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;再次创建Hexo静态博客，之前的博客因为电脑重装系统导致文件丢失了。（o(╥﹏╥)o）&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+      <category term="搭建博客" scheme="https://www.chenjianhui.cc/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="hexo" scheme="https://www.chenjianhui.cc/tags/hexo/"/>
+    
+      <category term="github" scheme="https://www.chenjianhui.cc/tags/github/"/>
+    
+      <category term="npm" scheme="https://www.chenjianhui.cc/tags/npm/"/>
+    
+      <category term="基础" scheme="https://www.chenjianhui.cc/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://www.chenjianhui.cc/2019/09/12/hello-world/"/>
+    <id>https://www.chenjianhui.cc/2019/09/12/hello-world/</id>
+    <published>2019-09-12T06:57:49.416Z</published>
+    <updated>2019-09-12T06:57:49.417Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
