@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>Test Hexo</title>
+      <link href="/2019/09/14/test-hexo/"/>
+      <url>/2019/09/14/test-hexo/</url>
+      
+        <content type="html"><![CDATA[<p>这是测试文件！！！</p><p>再次创建Hexo静态博客，之前的博客因为电脑重装系统导致文件丢失了。（o(╥﹏╥)o）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 搭建博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> github </tag>
+            
+            <tag> npm </tag>
+            
+            <tag> 测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello Hexo</title>
       <link href="/2019/09/12/hello-hexo/"/>
       <url>/2019/09/12/hello-hexo/</url>

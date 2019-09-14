@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.chenjianhui.cc/"/>
-  <updated>2019-09-14T06:38:34.734Z</updated>
+  <updated>2019-09-14T09:08:23.531Z</updated>
   <id>https://www.chenjianhui.cc/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Test Hexo</title>
+    <link href="https://www.chenjianhui.cc/2019/09/14/test-hexo/"/>
+    <id>https://www.chenjianhui.cc/2019/09/14/test-hexo/</id>
+    <published>2019-09-14T09:06:38.000Z</published>
+    <updated>2019-09-14T09:08:23.531Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;这是测试文件！！！&lt;/p&gt;
+&lt;p&gt;再次创建Hexo静态博客，之前的博客因为电脑重装系统导致文件丢失了。（o(╥﹏╥)o）&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+      <category term="搭建博客" scheme="https://www.chenjianhui.cc/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="hexo" scheme="https://www.chenjianhui.cc/tags/hexo/"/>
+    
+      <category term="github" scheme="https://www.chenjianhui.cc/tags/github/"/>
+    
+      <category term="npm" scheme="https://www.chenjianhui.cc/tags/npm/"/>
+    
+      <category term="测试" scheme="https://www.chenjianhui.cc/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello Hexo</title>
