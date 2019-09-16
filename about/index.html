@@ -285,7 +285,8 @@
 </div>
 <script>
 // 每天切换 banner 图.  Switch banner image every day. getDay()
-$('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getMinutes()%10 + '.jpg)');
+// $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+$('.bg-cover').css('background-image', 'url(https://bgm-1300242344.cos.ap-beijing.myqcloud.com/' + new Date().getDay() + '.jpg)');
 </script>
     </div>
 </div>
