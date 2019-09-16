@@ -277,8 +277,8 @@
     </div>
 </div>
 <script>
-// 每天切换 banner 图.  Switch banner image every day.
-$('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+// 每天切换 banner 图.  Switch banner image every day. getDay()
+$('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getMinutes()%10 + '.jpg)');
 </script>
     </div>
 </div>
@@ -332,11 +332,29 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 </a>
                 
                 
-                <a href="/tags/基础/" title="基础: 0">
+                <a href="/tags/读书/" title="读书: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="基础" style="background-color: #FEF9E7;">基础
-                        <span class="tag-length">0</span>
+                            data-tagname="读书" style="background-color: #FEF9E7;">读书
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/心理学/" title="心理学: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="心理学" style="background-color: #F8F9F9;">心理学
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/笔记/" title="笔记: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="笔记" style="background-color: #82E0AA;">笔记
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -364,7 +382,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"hexo","weight":1,"link":"https://www.chenjianhui.cc/tags/hexo/"},{"text":"github","weight":1,"link":"https://www.chenjianhui.cc/tags/github/"},{"text":"npm","weight":1,"link":"https://www.chenjianhui.cc/tags/npm/"},{"text":"测试","weight":1,"link":"https://www.chenjianhui.cc/tags/测试/"},{"text":"基础","weight":0,"link":"https://www.chenjianhui.cc/tags/基础/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"hexo","weight":1,"link":"https://www.chenjianhui.cc/tags/hexo/"},{"text":"github","weight":1,"link":"https://www.chenjianhui.cc/tags/github/"},{"text":"npm","weight":1,"link":"https://www.chenjianhui.cc/tags/npm/"},{"text":"测试","weight":1,"link":"https://www.chenjianhui.cc/tags/测试/"},{"text":"读书","weight":1,"link":"https://www.chenjianhui.cc/tags/读书/"},{"text":"心理学","weight":1,"link":"https://www.chenjianhui.cc/tags/心理学/"},{"text":"笔记","weight":1,"link":"https://www.chenjianhui.cc/tags/笔记/"}], {
         autoResize: true
     });
 </script>
@@ -381,7 +399,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             <br>
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">110</span>&nbsp;字
+                class="white-color">8.9k</span>&nbsp;字
             
             
             
