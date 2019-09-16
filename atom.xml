@@ -86,8 +86,8 @@
     <title>Hello World</title>
     <link href="https://www.chenjianhui.cc/2019/09/12/hello-world/"/>
     <id>https://www.chenjianhui.cc/2019/09/12/hello-world/</id>
-    <published>2019-09-12T06:57:49.416Z</published>
-    <updated>2019-09-12T06:57:49.417Z</updated>
+    <published>2019-09-12T05:06:20.000Z</published>
+    <updated>2019-09-16T11:17:04.547Z</updated>
     
     <summary type="html">
     
@@ -102,6 +102,14 @@
     </summary>
     
     
+      <category term="搭建博客" scheme="https://www.chenjianhui.cc/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="hexo" scheme="https://www.chenjianhui.cc/tags/hexo/"/>
+    
+      <category term="github" scheme="https://www.chenjianhui.cc/tags/github/"/>
+    
+      <category term="npm" scheme="https://www.chenjianhui.cc/tags/npm/"/>
     
   </entry>
   
