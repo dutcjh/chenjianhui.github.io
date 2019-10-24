@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.chenjianhui.cc/"/>
-  <updated>2019-10-19T14:01:51.507Z</updated>
+  <updated>2019-10-24T13:58:35.923Z</updated>
   <id>https://www.chenjianhui.cc/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Weibull分布及其在绝缘击穿数据处理中的应用</title>
+    <link href="https://www.chenjianhui.cc/2019/10/24/weibull-fen-bu-ji-qi-zai-jue-yuan-ji-chuan-shu-ju-chu-li-zhong-de-ying-yong/"/>
+    <id>https://www.chenjianhui.cc/2019/10/24/weibull-fen-bu-ji-qi-zai-jue-yuan-ji-chuan-shu-ju-chu-li-zhong-de-ying-yong/</id>
+    <published>2019-10-24T13:17:30.000Z</published>
+    <updated>2019-10-24T13:58:35.923Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Weibull分布&quot;&gt;&lt;a href=&quot;#Weibull分布&quot; class=&quot;headerlink&quot; title=&quot;Weibull分布&quot;&gt;&lt;/a&gt;Weibull分布&lt;/h2&gt;&lt;p&gt;韦布尔分布，即韦伯分布（Weibull
+        
+      
+    
+    </summary>
+    
+    
+      <category term="专业相关" scheme="https://www.chenjianhui.cc/categories/%E4%B8%93%E4%B8%9A%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="Weibull" scheme="https://www.chenjianhui.cc/tags/Weibull/"/>
+    
+      <category term="数据处理" scheme="https://www.chenjianhui.cc/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
+    
+      <category term="绝缘耐压" scheme="https://www.chenjianhui.cc/tags/%E7%BB%9D%E7%BC%98%E8%80%90%E5%8E%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>《围城》钱钟书</title>
@@ -295,7 +326,7 @@
     <link href="https://www.chenjianhui.cc/2019/09/24/photoshop-qu-xian-gong-ju-shi-yong-jiao-cheng/"/>
     <id>https://www.chenjianhui.cc/2019/09/24/photoshop-qu-xian-gong-ju-shi-yong-jiao-cheng/</id>
     <published>2019-09-24T07:18:55.000Z</published>
-    <updated>2019-09-24T07:26:45.636Z</updated>
+    <updated>2019-10-24T13:18:03.188Z</updated>
     
     <summary type="html">
     
@@ -450,7 +481,7 @@
     <link href="https://www.chenjianhui.cc/2019/09/17/6517b-tu-xing-hua-jie-mian-bian-cheng/"/>
     <id>https://www.chenjianhui.cc/2019/09/17/6517b-tu-xing-hua-jie-mian-bian-cheng/</id>
     <published>2019-09-17T01:48:09.000Z</published>
-    <updated>2019-09-24T08:37:40.247Z</updated>
+    <updated>2019-10-24T13:09:56.502Z</updated>
     
     <summary type="html">
     
@@ -465,7 +496,7 @@
     </summary>
     
     
-      <category term="LabVIEW编程" scheme="https://www.chenjianhui.cc/categories/LabVIEW%E7%BC%96%E7%A8%8B/"/>
+      <category term="专业相关" scheme="https://www.chenjianhui.cc/categories/%E4%B8%93%E4%B8%9A%E7%9B%B8%E5%85%B3/"/>
     
     
       <category term="LabVIEW" scheme="https://www.chenjianhui.cc/tags/LabVIEW/"/>
