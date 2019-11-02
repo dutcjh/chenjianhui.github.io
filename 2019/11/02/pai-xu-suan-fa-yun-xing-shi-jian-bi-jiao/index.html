@@ -266,7 +266,7 @@ if __name__ == &#34;__main__&#34;:
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/quickSort2.svg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/mergeSort.gif')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -282,10 +282,99 @@ if __name__ == &#34;__main__&#34;:
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -337,14 +426,14 @@ if __name__ == &#34;__main__&#34;:
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        884
+                        1.3k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        4 分
+                        5 分
                     </div>
                     
                 
@@ -407,6 +496,37 @@ if __name__ == &#34;__main__&#34;:
         arr<span class="token punctuation">[</span>preIndex<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> current
     <span class="token keyword">return</span> arr</code></pre>
 <p><img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/insertionSort.svg" alt="插入排序时间复杂度"></p>
+<h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><p><img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/mergeSort.gif" alt="归并排序时间复杂度"></p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">mergeSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment" spellcheck="true">#不断递归调用自己一直到拆分成成单个元素的时候就返回这个元素，不再拆分了</span>
+    <span class="token keyword">if</span> len<span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> arr
+    mid <span class="token operator">=</span> len<span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span> <span class="token comment" spellcheck="true">#取拆分的中间位置</span>
+    <span class="token comment" spellcheck="true">#拆分过后左右两侧子串</span>
+    left<span class="token punctuation">,</span> right <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token punctuation">:</span>mid<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>mid<span class="token punctuation">:</span><span class="token punctuation">]</span>
+    <span class="token comment" spellcheck="true">#对拆分过后的左右再拆分 一直到只有一个元素为止</span>
+    <span class="token comment" spellcheck="true">#最后一次递归时候ll和lr都会接到一个元素的列表</span>
+    <span class="token comment" spellcheck="true"># 最后一次递归之前的ll和rl会接收到排好序的子序列</span>
+    <span class="token comment" spellcheck="true"># 我们对返回的两个拆分结果进行排序后合并再返回正确顺序的子列表</span>
+    <span class="token comment" spellcheck="true"># 这里我们调用拎一个函数帮助我们按顺序合并ll和lr</span>
+    <span class="token keyword">return</span> merge<span class="token punctuation">(</span>mergeSort<span class="token punctuation">(</span>left<span class="token punctuation">)</span><span class="token punctuation">,</span> mergeSort<span class="token punctuation">(</span>right<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#这里接收两个列表</span>
+<span class="token keyword">def</span> <span class="token function">merge</span><span class="token punctuation">(</span>left<span class="token punctuation">,</span> right<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment" spellcheck="true"># 从两个有顺序的列表里边依次取数据比较后放入result</span>
+    <span class="token comment" spellcheck="true"># 每次我们分别拿出两个列表中最小的数比较，把较小的放入result</span>
+    result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">while</span> len<span class="token punctuation">(</span>left<span class="token punctuation">)</span><span class="token operator">></span><span class="token number">0</span> <span class="token operator">and</span> len<span class="token punctuation">(</span>right<span class="token punctuation">)</span><span class="token operator">></span><span class="token number">0</span> <span class="token punctuation">:</span>
+        <span class="token comment" spellcheck="true">#为了保持稳定性，当遇到相等的时候优先把左侧的数放进结果列表，因为left本来也是大数列中比较靠左的</span>
+        <span class="token keyword">if</span> left<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">&lt;=</span> right<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+            result<span class="token punctuation">.</span>append<span class="token punctuation">(</span> left<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            result<span class="token punctuation">.</span>append<span class="token punctuation">(</span> right<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">#while循环出来之后 说明其中一个数组没有数据了，我们把另一个数组添加到结果数组后面</span>
+    result <span class="token operator">+=</span> left
+    result <span class="token operator">+=</span> right
+    <span class="token keyword">return</span> result</code></pre>
+<p><img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/mergeSort.svg" alt="归并排序时间复杂度"></p>
 <h3 id="快速排序-未改进"><a href="#快速排序-未改进" class="headerlink" title="快速排序(未改进)"></a>快速排序(未改进)</h3><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">QuickSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> left <span class="token operator">=</span> None<span class="token punctuation">,</span> right <span class="token operator">=</span> None<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 传统快排</span>
     left <span class="token operator">=</span> <span class="token number">0</span> <span class="token keyword">if</span> <span class="token operator">not</span> isinstance<span class="token punctuation">(</span>left<span class="token punctuation">,</span> <span class="token punctuation">(</span>int<span class="token punctuation">,</span> float<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">else</span> left
     right <span class="token operator">=</span> len<span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span> <span class="token keyword">if</span> <span class="token operator">not</span> isinstance<span class="token punctuation">(</span>right<span class="token punctuation">,</span> <span class="token punctuation">(</span>int<span class="token punctuation">,</span> float<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">else</span> right
@@ -696,7 +816,7 @@ if __name__ == &#34;__main__&#34;:
                 <a href="/2019/11/02/pai-xu-suan-fa-yun-xing-shi-jian-bi-jiao/">
                     <div class="card-image">
                         
-                        <img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/quickSort2.svg" class="responsive-img" alt="排序算法运行时间比较">
+                        <img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/mergeSort.gif" class="responsive-img" alt="排序算法运行时间比较">
                         
                         <span class="card-title">排序算法运行时间比较</span>
                     </div>
@@ -819,6 +939,99 @@ if __name__ == "__main__":
 
 
 
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
     
 
 </main>
@@ -833,7 +1046,7 @@ if __name__ == "__main__":
             <br>
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">74.2k</span>&nbsp;字
+                class="white-color">74.5k</span>&nbsp;字
             
             
             
