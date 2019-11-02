@@ -332,7 +332,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        550
+                        549
                     </div>
                     
 
@@ -358,8 +358,34 @@
                 <h2 id="快速排序算法分析"><a href="#快速排序算法分析" class="headerlink" title="快速排序算法分析"></a>快速排序算法分析</h2><p>快速排序算法有时候也叫“快速排序”、“快排”，是在冒泡排序的基础上，增加分治策略而得到的一种用于对数字进行排序的算法。快速排序的大致过程是这样：(1)我们把大于基准值的数字移动到基准值的右边(在原始数组上进行这个操作)，把小于基准值的数字移动到基准值的左边，这样就确定了基准值的位置，于此同时，整个数组被划分为两个不可能有交叉的部分（基准值右边的元素比基准值左边的元素大）；(2)接下来，我们分别对基准值左边和右边的小数组进行前面的操作；(3)递归地进行，直到小数组里只有一个数字。</p>
 <p><img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.svg" alt="图解快速排序算法"></p>
 <p>Python代码实现：</p>
-<p>‘’’python<br>def quickSort(arr, left = None, right = None):<br>    left = 0 if not isinstance(left, (int, float)) else left<br>    right = len(arr)-1 if not isinstance(right, (int, float)) else right<br>    #判断low是否小于high,如果为false,直接返回<br>    if left &lt; right:<br>        i,j = left,right<br>        #设置基准数<br>        base = arr[i]<br><br>        while i &lt; j:<br>            #如果列表后边的数,比基准数大或相等,则前移一位直到有比基准数小的数出现<br>            while (i &lt; j) and (arr[j] &gt;= base):<br>                j = j - 1<br><br>            #如找到,则把第j个元素赋值给第个元素i,此时表中i,j个元素相等<br>            arr[i] = arr[j]<br><br>            #同样的方式比较前半区<br>            while (i &lt; j) and (arr[i] &lt;= base):<br>                i = i + 1<br>            arr[j] = arr[i]<br>        #做完第一轮比较之后,列表被分成了两个半区,并且i=j,需要将这个数设置回base<br>        arr[i] = base<br><br>        #递归前后半区<br>        quickSort(arr, left, i - 1)<br>        quickSort(arr, j + 1, right)<br>    return arr</p>
-<p>‘’’</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">quickSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> left <span class="token operator">=</span> None<span class="token punctuation">,</span> right <span class="token operator">=</span> None<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    left <span class="token operator">=</span> <span class="token number">0</span> <span class="token keyword">if</span> <span class="token operator">not</span> isinstance<span class="token punctuation">(</span>left<span class="token punctuation">,</span> <span class="token punctuation">(</span>int<span class="token punctuation">,</span> float<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">else</span> left
+    right <span class="token operator">=</span> len<span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span> <span class="token keyword">if</span> <span class="token operator">not</span> isinstance<span class="token punctuation">(</span>right<span class="token punctuation">,</span> <span class="token punctuation">(</span>int<span class="token punctuation">,</span> float<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">else</span> right
+    <span class="token comment" spellcheck="true">#判断low是否小于high,如果为false,直接返回</span>
+    <span class="token keyword">if</span> left <span class="token operator">&lt;</span> right<span class="token punctuation">:</span>
+        i<span class="token punctuation">,</span>j <span class="token operator">=</span> left<span class="token punctuation">,</span>right
+        <span class="token comment" spellcheck="true">#设置基准数</span>
+        base <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+
+        <span class="token keyword">while</span> i <span class="token operator">&lt;</span> j<span class="token punctuation">:</span>
+            <span class="token comment" spellcheck="true">#如果列表后边的数,比基准数大或相等,则前移一位直到有比基准数小的数出现</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> j<span class="token punctuation">)</span> <span class="token operator">and</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">>=</span> base<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                j <span class="token operator">=</span> j <span class="token operator">-</span> <span class="token number">1</span>
+
+            <span class="token comment" spellcheck="true">#如找到,则把第j个元素赋值给第个元素i,此时表中i,j个元素相等</span>
+            arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+
+            <span class="token comment" spellcheck="true">#同样的方式比较前半区</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> j<span class="token punctuation">)</span> <span class="token operator">and</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> base<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                i <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span>
+            arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        <span class="token comment" spellcheck="true">#做完第一轮比较之后,列表被分成了两个半区,并且i=j,需要将这个数设置回base</span>
+        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> base
+
+        <span class="token comment" spellcheck="true">#递归前后半区</span>
+        quickSort<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> left<span class="token punctuation">,</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+        quickSort<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> right<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> arr</code></pre>
 <p><img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/quicksort.gif" alt></p>
 <p>快速排序为什么叫”快速”排序呢？因为它时间复杂度是O(nlogn)， 平均速度比较快，应用比较广，比如python的sorted函数使用的就是快速排序。另外，这个算法里用到了递归，还需要我们使用一些策略来压缩内存的消耗，算是元素比较多的一个内容，因此是教材必讲算法。</p>
 
