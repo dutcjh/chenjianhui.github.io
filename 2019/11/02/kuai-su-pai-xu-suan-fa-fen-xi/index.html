@@ -4,10 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Test Hexo, 一水之间">
-    <meta name="description" content="这是测试文件！！！
-再次创建Hexo静态博客，之前的博客因为电脑重装系统导致文件丢失了。（o(╥﹏╥)o）
-">
+    <meta name="keywords" content="快速排序算法分析, 一水之间">
+    <meta name="description" content="快速排序算法分析快速排序算法有时候也叫“快速排序”、“快排”，是在冒泡排序的基础上，增加分治策略而得到的一种用于对数字进行排序的算法。快速排序的大致过程是这样：(1)我们把大于基准值的数字移动到基准值的右边(在原始数组上进行这个操作)，把小">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Test Hexo | 一水之间</title>
+    <title>快速排序算法分析 | 一水之间</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -263,13 +261,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://featureimg-1300242344.cos.ap-beijing.myqcloud.com/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/quicksort.gif')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Test Hexo
+                        快速排序算法分析
                     </div>
                 </div>
             </div>
@@ -380,20 +378,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/hexo/" target="_blank">
-                                <span class="chip bg-color">hexo</span>
+                            <a href="/tags/算法/" target="_blank">
+                                <span class="chip bg-color">算法</span>
                             </a>
                         
-                            <a href="/tags/github/" target="_blank">
-                                <span class="chip bg-color">github</span>
+                            <a href="/tags/计算机/" target="_blank">
+                                <span class="chip bg-color">计算机</span>
                             </a>
                         
-                            <a href="/tags/npm/" target="_blank">
-                                <span class="chip bg-color">npm</span>
-                            </a>
-                        
-                            <a href="/tags/测试/" target="_blank">
-                                <span class="chip bg-color">测试</span>
+                            <a href="/tags/笔记/" target="_blank">
+                                <span class="chip bg-color">笔记</span>
                             </a>
                         
                     </div>
@@ -404,8 +398,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/搭建博客/" class="post-category" target="_blank">
-                                搭建博客
+                            <a href="/categories/编程技术/" class="post-category" target="_blank">
+                                编程技术
                             </a>
                         
                     </div>
@@ -416,21 +410,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-14
+                    2019-11-02
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        37
+                        550
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        2 分
                     </div>
                     
                 
@@ -446,8 +440,13 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>这是测试文件！！！</p>
-<p>再次创建Hexo静态博客，之前的博客因为电脑重装系统导致文件丢失了。（o(╥﹏╥)o）</p>
+                <h2 id="快速排序算法分析"><a href="#快速排序算法分析" class="headerlink" title="快速排序算法分析"></a>快速排序算法分析</h2><p>快速排序算法有时候也叫“快速排序”、“快排”，是在冒泡排序的基础上，增加分治策略而得到的一种用于对数字进行排序的算法。快速排序的大致过程是这样：(1)我们把大于基准值的数字移动到基准值的右边(在原始数组上进行这个操作)，把小于基准值的数字移动到基准值的左边，这样就确定了基准值的位置，于此同时，整个数组被划分为两个不可能有交叉的部分（基准值右边的元素比基准值左边的元素大）；(2)接下来，我们分别对基准值左边和右边的小数组进行前面的操作；(3)递归地进行，直到小数组里只有一个数字。</p>
+<p><img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.svg" alt="图解快速排序算法"></p>
+<p>Python代码实现：</p>
+<p>‘’’Python<br>def quickSort(arr, left = None, right = None):<br>    left = 0 if not isinstance(left, (int, float)) else left<br>    right = len(arr)-1 if not isinstance(right, (int, float)) else right<br>    #判断low是否小于high,如果为false,直接返回<br>    if left &lt; right:<br>        i,j = left,right<br>        #设置基准数<br>        base = arr[i]<br><br>        while i &lt; j:<br>            #如果列表后边的数,比基准数大或相等,则前移一位直到有比基准数小的数出现<br>            while (i &lt; j) and (arr[j] &gt;= base):<br>                j = j - 1<br><br>            #如找到,则把第j个元素赋值给第个元素i,此时表中i,j个元素相等<br>            arr[i] = arr[j]<br><br>            #同样的方式比较前半区<br>            while (i &lt; j) and (arr[i] &lt;= base):<br>                i = i + 1<br>            arr[j] = arr[i]<br>        #做完第一轮比较之后,列表被分成了两个半区,并且i=j,需要将这个数设置回base<br>        arr[i] = base<br><br>        #递归前后半区<br>        quickSort(arr, left, i - 1)<br>        quickSort(arr, j + 1, right)<br>    return arr</p>
+<p>‘’’</p>
+<p><img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/quicksort.gif" alt></p>
+<p>快速排序为什么叫”快速”排序呢？因为它时间复杂度是O(nlogn)， 平均速度比较快，应用比较广，比如python的sorted函数使用的就是快速排序。另外，这个算法里用到了递归，还需要我们使用一些策略来压缩内存的消耗，算是元素比较多的一个内容，因此是教材必讲算法。</p>
 
             </div>
             <hr/>
@@ -606,9 +605,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Test Hexo》
+                    《快速排序算法分析》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/14/test-hexo/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/11/02/kuai-su-pai-xu-suan-fa-fen-xi/" property="cc:attributionName"
                rel="cc:attributionURL">
                 Chen Jianhui
             </a> 采用
@@ -648,53 +647,55 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/09/16/qin-mi-guan-xi-du-shu-bi-ji/">
+                <a href="/2019/11/02/kuai-su-pai-xu-suan-fa-fen-xi/">
                     <div class="card-image">
                         
-                        <img src="https://bookread1-1300242344.cos.ap-beijing.myqcloud.com/book1.jpg" class="responsive-img" alt="《亲密关系——通往灵魂的桥梁》读书笔记">
+                        <img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/quicksort.gif" class="responsive-img" alt="快速排序算法分析">
                         
-                        <span class="card-title">《亲密关系——通往灵魂的桥梁》读书笔记</span>
+                        <span class="card-title">快速排序算法分析</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            我们需要的是能鼓励我们超越自我的伴侣；我们在追寻的是能激发人生意义与方向，并在我们受到考验时，给我们帮助的人际关系，这也就是“灵魂关系”。
+                            快速排序算法有时候也叫“快速排序”、“快排”，是在冒泡排序的基础上，增加分治策略而得到的一种用于对数字进行排序的算法。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/读书笔记/" class="post-category" target="_blank">
-                                    读书笔记
+                            <a href="/categories/编程技术/" class="post-category" target="_blank">
+                                    编程技术
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
+                    <a href="/tags/算法/" target="_blank">
+                        <span class="chip bg-color">算法</span>
+                    </a>
+                    
+                    <a href="/tags/计算机/" target="_blank">
+                        <span class="chip bg-color">计算机</span>
+                    </a>
+                    
                     <a href="/tags/笔记/" target="_blank">
                         <span class="chip bg-color">笔记</span>
-                    </a>
-                    
-                    <a href="/tags/读书/" target="_blank">
-                        <span class="chip bg-color">读书</span>
-                    </a>
-                    
-                    <a href="/tags/心理学/" target="_blank">
-                        <span class="chip bg-color">心理学</span>
                     </a>
                     
                 </div>
@@ -708,31 +709,30 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/09/12/hello-world/">
+                <a href="/2019/10/24/weibull-fen-bu-ji-qi-zai-jue-yuan-ji-chuan-shu-ju-chu-li-zhong-de-ying-yong/">
                     <div class="card-image">
                         
+                        <img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/Weibull/weibull%E5%88%86%E5%B8%83%E5%AE%9E%E4%BE%8B2.jpg" class="responsive-img" alt="Weibull分布及其在绝缘击穿数据处理中的应用">
                         
-                        <img src="https://featureimg-1300242344.cos.ap-beijing.myqcloud.com/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">Weibull分布及其在绝缘击穿数据处理中的应用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            电气绝缘数据处理中，常常采用Weibull分布进行分析。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-12
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-24
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/搭建博客/" class="post-category" target="_blank">
-                                    搭建博客
+                            <a href="/categories/专业相关/" class="post-category" target="_blank">
+                                    专业相关
                                 </a>
                             
                             
@@ -742,16 +742,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/" target="_blank">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/Weibull/" target="_blank">
+                        <span class="chip bg-color">Weibull</span>
                     </a>
                     
-                    <a href="/tags/github/" target="_blank">
-                        <span class="chip bg-color">github</span>
+                    <a href="/tags/数据处理/" target="_blank">
+                        <span class="chip bg-color">数据处理</span>
                     </a>
                     
-                    <a href="/tags/npm/" target="_blank">
-                        <span class="chip bg-color">npm</span>
+                    <a href="/tags/绝缘耐压/" target="_blank">
+                        <span class="chip bg-color">绝缘耐压</span>
                     </a>
                     
                 </div>
