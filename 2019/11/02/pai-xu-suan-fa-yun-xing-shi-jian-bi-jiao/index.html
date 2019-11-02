@@ -4,8 +4,13 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="快速排序算法分析, 一水之间">
-    <meta name="description" content="快速排序算法分析快速排序算法有时候也叫“快速排序”、“快排”，是在冒泡排序的基础上，增加分治策略而得到的一种用于对数字进行排序的算法。快速排序的大致过程是这样：(1)我们把大于基准值的数字移动到基准值的右边(在原始数组上进行这个操作)，把小">
+    <meta name="keywords" content="排序算法运行时间比较, 一水之间">
+    <meta name="description" content="排序算法运行时间比较测试程序import numpy as np
+import matplotlib.pyplot as plt
+import time
+
+if __name__ == &#34;__main__&#34;:
+    num = [100,">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>快速排序算法分析 | 一水之间</title>
+    <title>排序算法运行时间比较 | 一水之间</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -261,13 +266,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/quicksort.gif')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/quickSort2.svg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        快速排序算法分析
+                        排序算法运行时间比较
                     </div>
                 </div>
             </div>
@@ -332,14 +337,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        549
+                        884
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        2 分
+                        4 分
                     </div>
                     
                 
@@ -355,10 +360,54 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="快速排序算法分析"><a href="#快速排序算法分析" class="headerlink" title="快速排序算法分析"></a>快速排序算法分析</h2><p>快速排序算法有时候也叫“快速排序”、“快排”，是在冒泡排序的基础上，增加分治策略而得到的一种用于对数字进行排序的算法。快速排序的大致过程是这样：(1)我们把大于基准值的数字移动到基准值的右边(在原始数组上进行这个操作)，把小于基准值的数字移动到基准值的左边，这样就确定了基准值的位置，于此同时，整个数组被划分为两个不可能有交叉的部分（基准值右边的元素比基准值左边的元素大）；(2)接下来，我们分别对基准值左边和右边的小数组进行前面的操作；(3)递归地进行，直到小数组里只有一个数字。</p>
-<p><img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.svg" alt="图解快速排序算法"></p>
-<p>Python代码实现：</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">quickSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> left <span class="token operator">=</span> None<span class="token punctuation">,</span> right <span class="token operator">=</span> None<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <h2 id="排序算法运行时间比较"><a href="#排序算法运行时间比较" class="headerlink" title="排序算法运行时间比较"></a>排序算法运行时间比较</h2><h3 id="测试程序"><a href="#测试程序" class="headerlink" title="测试程序"></a>测试程序</h3><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">import</span> time
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    num <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">,</span> <span class="token number">400</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">,</span> <span class="token number">800</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">,</span> <span class="token number">5000</span><span class="token punctuation">,</span> <span class="token number">8000</span><span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">]</span>
+    tm <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> num<span class="token punctuation">:</span>
+        arr <span class="token operator">=</span> list<span class="token punctuation">(</span>np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        starttime <span class="token operator">=</span> time<span class="token punctuation">.</span>clock<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 开始计时</span>
+        selectionSort<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 更改算法</span>
+        endtime <span class="token operator">=</span> time<span class="token punctuation">.</span>clock<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#停止计时</span>
+        tm<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>endtime<span class="token operator">-</span>starttime<span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">1000</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>num<span class="token punctuation">,</span> tm<span class="token punctuation">,</span> linewidth<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span>color<span class="token operator">=</span><span class="token string">'r'</span><span class="token punctuation">,</span>marker<span class="token operator">=</span><span class="token string">'o'</span><span class="token punctuation">,</span> markerfacecolor<span class="token operator">=</span><span class="token string">'blue'</span><span class="token punctuation">,</span>markersize<span class="token operator">=</span><span class="token number">6</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">bubbleSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> len<span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        flag <span class="token operator">=</span> <span class="token boolean">False</span>  <span class="token comment" spellcheck="true"># 停止标志</span>
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token operator">-</span>i<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">></span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+                flag <span class="token operator">=</span> <span class="token boolean">True</span>
+        <span class="token keyword">if</span> <span class="token operator">not</span> flag<span class="token punctuation">:</span><span class="token keyword">break</span>
+    <span class="token keyword">return</span> arr</code></pre>
+<p><img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/bubbleSort.svg" alt="冒泡排序时间复杂度"></p>
+<h3 id="选择排序："><a href="#选择排序：" class="headerlink" title="选择排序："></a>选择排序：</h3><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">selectionSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        minIndex <span class="token operator">=</span> i<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true"># 记录最小数的索引</span>
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>len<span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;</span> arr<span class="token punctuation">[</span>minIndex<span class="token punctuation">]</span><span class="token punctuation">:</span>
+                minIndex <span class="token operator">=</span> j<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true"># i不是最小数时，将 i和最小数进行交换</span>
+        <span class="token keyword">if</span> i <span class="token operator">!=</span> minIndex<span class="token punctuation">:</span>
+            arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>minIndex<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>minIndex<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+    <span class="token keyword">return</span> arr</code></pre>
+<p><img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/selectionSort.svg" alt="选择排序时间复杂度"></p>
+<h3 id="插入排序："><a href="#插入排序：" class="headerlink" title="插入排序："></a>插入排序：</h3><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">insertionSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> left <span class="token operator">=</span> None<span class="token punctuation">,</span> right <span class="token operator">=</span> None<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    left <span class="token operator">=</span> <span class="token number">0</span> <span class="token keyword">if</span> <span class="token operator">not</span> isinstance<span class="token punctuation">(</span>left<span class="token punctuation">,</span> <span class="token punctuation">(</span>int<span class="token punctuation">,</span> float<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">else</span> left
+    right <span class="token operator">=</span> len<span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span> <span class="token keyword">if</span> <span class="token operator">not</span> isinstance<span class="token punctuation">(</span>right<span class="token punctuation">,</span> <span class="token punctuation">(</span>int<span class="token punctuation">,</span> float<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">else</span> right
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>left<span class="token punctuation">,</span> right<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        preIndex <span class="token operator">=</span> i<span class="token number">-1</span>
+        current <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        <span class="token keyword">while</span> preIndex <span class="token operator">>=</span> left <span class="token operator">and</span> arr<span class="token punctuation">[</span>preIndex<span class="token punctuation">]</span> <span class="token operator">></span> current<span class="token punctuation">:</span>
+            arr<span class="token punctuation">[</span>preIndex<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>preIndex<span class="token punctuation">]</span>
+            preIndex <span class="token operator">=</span> preIndex<span class="token number">-1</span>
+        arr<span class="token punctuation">[</span>preIndex<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> current
+    <span class="token keyword">return</span> arr</code></pre>
+<p><img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/insertionSort.svg" alt="插入排序时间复杂度"></p>
+<h3 id="快速排序-未改进"><a href="#快速排序-未改进" class="headerlink" title="快速排序(未改进)"></a>快速排序(未改进)</h3><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">QuickSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> left <span class="token operator">=</span> None<span class="token punctuation">,</span> right <span class="token operator">=</span> None<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 传统快排</span>
     left <span class="token operator">=</span> <span class="token number">0</span> <span class="token keyword">if</span> <span class="token operator">not</span> isinstance<span class="token punctuation">(</span>left<span class="token punctuation">,</span> <span class="token punctuation">(</span>int<span class="token punctuation">,</span> float<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">else</span> left
     right <span class="token operator">=</span> len<span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span> <span class="token keyword">if</span> <span class="token operator">not</span> isinstance<span class="token punctuation">(</span>right<span class="token punctuation">,</span> <span class="token punctuation">(</span>int<span class="token punctuation">,</span> float<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">else</span> right
     <span class="token comment" spellcheck="true">#判断low是否小于high,如果为false,直接返回</span>
@@ -386,8 +435,59 @@
         quickSort<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> left<span class="token punctuation">,</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
         quickSort<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> right<span class="token punctuation">)</span>
     <span class="token keyword">return</span> arr</code></pre>
-<p><img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/quicksort.gif" alt></p>
-<p>快速排序为什么叫”快速”排序呢？因为它时间复杂度是O(nlogn)， 平均速度比较快，应用比较广，比如python的sorted函数使用的就是快速排序。另外，这个算法里用到了递归，还需要我们使用一些策略来压缩内存的消耗，算是元素比较多的一个内容，因此是教材必讲算法。</p>
+<p><img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/QuickSort1.svg" alt="快速排序时间复杂度"></p>
+<h3 id="快速排序-改进"><a href="#快速排序-改进" class="headerlink" title="快速排序(改进)"></a>快速排序(改进)</h3><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">insertionSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> left <span class="token operator">=</span> None<span class="token punctuation">,</span> right <span class="token operator">=</span> None<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    left <span class="token operator">=</span> <span class="token number">0</span> <span class="token keyword">if</span> <span class="token operator">not</span> isinstance<span class="token punctuation">(</span>left<span class="token punctuation">,</span> <span class="token punctuation">(</span>int<span class="token punctuation">,</span> float<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">else</span> left
+    right <span class="token operator">=</span> len<span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span> <span class="token keyword">if</span> <span class="token operator">not</span> isinstance<span class="token punctuation">(</span>right<span class="token punctuation">,</span> <span class="token punctuation">(</span>int<span class="token punctuation">,</span> float<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">else</span> right
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>left<span class="token punctuation">,</span> right<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        preIndex <span class="token operator">=</span> i<span class="token number">-1</span>
+        current <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        <span class="token keyword">while</span> preIndex <span class="token operator">>=</span> left <span class="token operator">and</span> arr<span class="token punctuation">[</span>preIndex<span class="token punctuation">]</span> <span class="token operator">></span> current<span class="token punctuation">:</span>
+            arr<span class="token punctuation">[</span>preIndex<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>preIndex<span class="token punctuation">]</span>
+            preIndex <span class="token operator">=</span> preIndex<span class="token number">-1</span>
+        arr<span class="token punctuation">[</span>preIndex<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> current
+    <span class="token keyword">return</span> arr
+
+<span class="token keyword">def</span> <span class="token function">quickSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> left <span class="token operator">=</span> None<span class="token punctuation">,</span> right <span class="token operator">=</span> None<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    left <span class="token operator">=</span> <span class="token number">0</span> <span class="token keyword">if</span> <span class="token operator">not</span> isinstance<span class="token punctuation">(</span>left<span class="token punctuation">,</span> <span class="token punctuation">(</span>int<span class="token punctuation">,</span> float<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">else</span> left
+    right <span class="token operator">=</span> len<span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span> <span class="token keyword">if</span> <span class="token operator">not</span> isinstance<span class="token punctuation">(</span>right<span class="token punctuation">,</span> <span class="token punctuation">(</span>int<span class="token punctuation">,</span> float<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">else</span> right
+    length <span class="token operator">=</span> right <span class="token operator">-</span> left
+    <span class="token keyword">if</span> length <span class="token operator">></span> <span class="token number">10</span><span class="token punctuation">:</span>
+        partitionIndex <span class="token operator">=</span> partition<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> left<span class="token punctuation">,</span> right<span class="token punctuation">)</span>
+        quickSort<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> left<span class="token punctuation">,</span> partitionIndex<span class="token punctuation">)</span>
+        quickSort<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> partitionIndex<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> right<span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        insertionSort<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> left<span class="token punctuation">,</span> right<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> arr
+
+<span class="token keyword">def</span> <span class="token function">partition</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> left<span class="token punctuation">,</span> right<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment" spellcheck="true"># 把中间大的数放在最左边作为基准值</span>
+    medium <span class="token operator">=</span> <span class="token punctuation">(</span>left<span class="token operator">+</span>right<span class="token punctuation">)</span><span class="token operator">//</span><span class="token number">2</span>
+    <span class="token keyword">if</span> arr<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">></span> arr<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        arr<span class="token punctuation">[</span>left<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>left<span class="token punctuation">]</span>
+    <span class="token keyword">if</span> arr<span class="token punctuation">[</span>medium<span class="token punctuation">]</span> <span class="token operator">></span> arr<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        arr<span class="token punctuation">[</span>medium<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>medium<span class="token punctuation">]</span>
+    <span class="token keyword">if</span> arr<span class="token punctuation">[</span>medium<span class="token punctuation">]</span> <span class="token operator">></span> arr<span class="token punctuation">[</span>left<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        arr<span class="token punctuation">[</span>left<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>medium<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>medium<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>left<span class="token punctuation">]</span>
+    <span class="token comment" spellcheck="true"># 基准</span>
+    pivot <span class="token operator">=</span> arr<span class="token punctuation">[</span>left<span class="token punctuation">]</span>
+    i<span class="token punctuation">,</span>j <span class="token operator">=</span> left<span class="token punctuation">,</span>right
+    <span class="token keyword">while</span> i <span class="token operator">&lt;</span> j<span class="token punctuation">:</span>
+        <span class="token comment" spellcheck="true">#如果列表后边的数,比基准数大或相等,则前移一位直到有比基准数小的数出现</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> j<span class="token punctuation">)</span> <span class="token operator">and</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">>=</span> pivot<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            j <span class="token operator">=</span> j <span class="token operator">-</span> <span class="token number">1</span>
+        <span class="token comment" spellcheck="true">#如找到,则把第j个元素赋值给第个元素i,此时表中i,j个元素相等</span>
+        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+
+        <span class="token comment" spellcheck="true">#同样的方式比较前半区</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> j<span class="token punctuation">)</span> <span class="token operator">and</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> pivot<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            i <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span>
+        arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        <span class="token comment" spellcheck="true">#做完第一轮比较之后,列表被分成了两个半区,并且i=j,需要将这个数设置回pivot</span>
+    arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> pivot
+    <span class="token comment" spellcheck="true">#做完第一轮比较之后,列表被分成了两个半区,并且i=j,需要将这个数返回</span>
+    <span class="token keyword">return</span> i</code></pre>
+<p><img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/quickSort2.svg" alt="快速排序时间复杂度"></p>
 
             </div>
             <hr/>
@@ -546,9 +646,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《快速排序算法分析》
+                    《排序算法运行时间比较》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/11/02/kuai-su-pai-xu-suan-fa-fen-xi/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/11/02/pai-xu-suan-fa-yun-xing-shi-jian-bi-jiao/" property="cc:attributionName"
                rel="cc:attributionURL">
                 Chen Jianhui
             </a> 采用
@@ -588,9 +688,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2019/11/02/pai-xu-suan-fa-yun-xing-shi-jian-bi-jiao/">
                     <div class="card-image">
@@ -612,9 +713,9 @@ if __name__ == "__main__":
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -627,6 +728,7 @@ if __name__ == "__main__":
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -657,30 +759,30 @@ if __name__ == "__main__":
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/10/24/weibull-fen-bu-ji-qi-zai-jue-yuan-ji-chuan-shu-ju-chu-li-zhong-de-ying-yong/">
+                <a href="/2019/11/02/kuai-su-pai-xu-suan-fa-fen-xi/">
                     <div class="card-image">
                         
-                        <img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/Weibull/weibull%E5%88%86%E5%B8%83%E5%AE%9E%E4%BE%8B2.jpg" class="responsive-img" alt="Weibull分布及其在绝缘击穿数据处理中的应用">
+                        <img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/quicksort.gif" class="responsive-img" alt="快速排序算法分析">
                         
-                        <span class="card-title">Weibull分布及其在绝缘击穿数据处理中的应用</span>
+                        <span class="card-title">快速排序算法分析</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            电气绝缘数据处理中，常常采用Weibull分布进行分析。
+                            快速排序算法有时候也叫“快速排序”、“快排”，是在冒泡排序的基础上，增加分治策略而得到的一种用于对数字进行排序的算法。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-24
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-02
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/专业相关/" class="post-category" target="_blank">
-                                    专业相关
+                            <a href="/categories/编程技术/" class="post-category" target="_blank">
+                                    编程技术
                                 </a>
                             
                             
@@ -690,16 +792,20 @@ if __name__ == "__main__":
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Weibull/" target="_blank">
-                        <span class="chip bg-color">Weibull</span>
+                    <a href="/tags/算法/" target="_blank">
+                        <span class="chip bg-color">算法</span>
                     </a>
                     
-                    <a href="/tags/数据处理/" target="_blank">
-                        <span class="chip bg-color">数据处理</span>
+                    <a href="/tags/计算机/" target="_blank">
+                        <span class="chip bg-color">计算机</span>
                     </a>
                     
-                    <a href="/tags/绝缘耐压/" target="_blank">
-                        <span class="chip bg-color">绝缘耐压</span>
+                    <a href="/tags/笔记/" target="_blank">
+                        <span class="chip bg-color">笔记</span>
+                    </a>
+                    
+                    <a href="/tags/Python/" target="_blank">
+                        <span class="chip bg-color">Python</span>
                     </a>
                     
                 </div>
