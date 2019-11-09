@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.chenjianhui.cc/"/>
-  <updated>2019-11-02T14:38:07.902Z</updated>
+  <updated>2019-11-09T03:34:22.086Z</updated>
   <id>https://www.chenjianhui.cc/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>广度优先搜索算法</title>
+    <link href="https://www.chenjianhui.cc/2019/11/09/guang-du-you-xian-sou-suo-suan-fa/"/>
+    <id>https://www.chenjianhui.cc/2019/11/09/guang-du-you-xian-sou-suo-suan-fa/</id>
+    <published>2019-11-09T03:06:16.000Z</published>
+    <updated>2019-11-09T03:34:22.086Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;广度优先搜索算法&quot;&gt;&lt;a href=&quot;#广度优先搜索算法&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程技术" scheme="https://www.chenjianhui.cc/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="算法" scheme="https://www.chenjianhui.cc/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="计算机" scheme="https://www.chenjianhui.cc/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+      <category term="笔记" scheme="https://www.chenjianhui.cc/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Python" scheme="https://www.chenjianhui.cc/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>排序算法运行时间比较</title>
@@ -603,41 +636,6 @@
       <category term="读书" scheme="https://www.chenjianhui.cc/tags/%E8%AF%BB%E4%B9%A6/"/>
     
       <category term="心理学" scheme="https://www.chenjianhui.cc/tags/%E5%BF%83%E7%90%86%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Test Hexo</title>
-    <link href="https://www.chenjianhui.cc/2019/09/14/test-hexo/"/>
-    <id>https://www.chenjianhui.cc/2019/09/14/test-hexo/</id>
-    <published>2019-09-14T09:06:38.000Z</published>
-    <updated>2019-09-14T09:08:23.531Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;这是测试文件！！！&lt;/p&gt;
-&lt;p&gt;再次创建Hexo静态博客，之前的博客因为电脑重装系统导致文件丢失了。（o(╥﹏╥)o）&lt;/p&gt;
-
-        
-      
-    
-    </summary>
-    
-    
-      <category term="搭建博客" scheme="https://www.chenjianhui.cc/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-      <category term="hexo" scheme="https://www.chenjianhui.cc/tags/hexo/"/>
-    
-      <category term="github" scheme="https://www.chenjianhui.cc/tags/github/"/>
-    
-      <category term="npm" scheme="https://www.chenjianhui.cc/tags/npm/"/>
-    
-      <category term="测试" scheme="https://www.chenjianhui.cc/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
