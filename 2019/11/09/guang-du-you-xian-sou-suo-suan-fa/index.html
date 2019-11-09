@@ -366,46 +366,46 @@
 <p>下面来看看广度优先搜索的执行过程。</p>
 <p><img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/gdyx3.png" alt></p>
 <p>这个算法将不断执行，直到满足以下条件之一：<br>找到一位芒果销售商；<br>队列变成空的，这意味着你的人际关系网中没有芒果销售商。<br>Peggy既是Alice的朋友又是Bob的朋友，因此她将被加入队列两次：一次是在添加Alice的朋友时，另一次是在添加Bob的朋友时。因此，搜索队列将包含两个Peggy。<br>但你只需检查Peggy一次，看她是不是芒果销售商。如果你检查两次，就做了无用功。因此，检查完一个人后，应将其标记为已检查，且不再检查他。<br>如果不这样做，就可能会导致无限循环。<br>检查一个人之前，要确认之前没检查过他，这很重要。为此，你可使用一个列表来记录检查过的人。<br>考虑到这一点后，广度优先搜索的最终代码如下。</p>
-<pre class=" language-Python"><code class="language-Python"># -*- coding: utf-8 -*-
-"""
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># -*- coding: utf-8 -*-</span>
+<span class="token triple-quoted-string string">"""
 Created on Fri Nov  8 19:54:28 2019
 
 @author: dutch
-"""
-from collections import deque # 导入队列
+"""</span>
+<span class="token keyword">from</span> collections <span class="token keyword">import</span> deque <span class="token comment" spellcheck="true"># 导入队列</span>
 
-# 实现人际关系图
-graph = {}
-graph["you"] = ["alice", "bob", "claire"]
-graph["bob"] = ["anuj", "peggy"]
-graph["alice"] = ["peggy"]
-graph["claire"] = ["thom", "jonny"]
-graph["anuj"] = []
-graph["peggy"] = []
-graph["thom"] = []
-graph["jonny"] = []
+<span class="token comment" spellcheck="true"># 实现人际关系图</span>
+graph <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+graph<span class="token punctuation">[</span><span class="token string">"you"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"alice"</span><span class="token punctuation">,</span> <span class="token string">"bob"</span><span class="token punctuation">,</span> <span class="token string">"claire"</span><span class="token punctuation">]</span>
+graph<span class="token punctuation">[</span><span class="token string">"bob"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"anuj"</span><span class="token punctuation">,</span> <span class="token string">"peggy"</span><span class="token punctuation">]</span>
+graph<span class="token punctuation">[</span><span class="token string">"alice"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"peggy"</span><span class="token punctuation">]</span>
+graph<span class="token punctuation">[</span><span class="token string">"claire"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"thom"</span><span class="token punctuation">,</span> <span class="token string">"jonny"</span><span class="token punctuation">]</span>
+graph<span class="token punctuation">[</span><span class="token string">"anuj"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+graph<span class="token punctuation">[</span><span class="token string">"peggy"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+graph<span class="token punctuation">[</span><span class="token string">"thom"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+graph<span class="token punctuation">[</span><span class="token string">"jonny"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
 
-# 判断一个人是不是芒果销售商
-def person_is_seller(name):
-    return name[-1] == 'm'
+<span class="token comment" spellcheck="true"># 判断一个人是不是芒果销售商</span>
+<span class="token keyword">def</span> <span class="token function">person_is_seller</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> name<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'m'</span>
 
-# 广度优先搜索
-def search(name):
-    search_queue = deque() # 查找名单队列
-    search_queue += graph[name] # 把你的朋友加入队列
-    searched = [] # 这个数组用于记录检查过的人
-    while search_queue: # 查找队列不为空
-        person = search_queue.popleft() # 出列
-        if person not in searched: # person没有检查过才检查
-            if person_is_seller(person): # 找到
-                print(person + " is a mango seller!")
-                return True
-            else: #没找到
-                search_queue += graph[person] # 把person的朋友加入待查找队列
-                searched.append(person) # 将这个人标记为检查过
-    return False # 都没找到
+<span class="token comment" spellcheck="true"># 广度优先搜索</span>
+<span class="token keyword">def</span> <span class="token function">search</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    search_queue <span class="token operator">=</span> deque<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 查找名单队列</span>
+    search_queue <span class="token operator">+=</span> graph<span class="token punctuation">[</span>name<span class="token punctuation">]</span> <span class="token comment" spellcheck="true"># 把你的朋友加入队列</span>
+    searched <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token comment" spellcheck="true"># 这个数组用于记录检查过的人</span>
+    <span class="token keyword">while</span> search_queue<span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 查找队列不为空</span>
+        person <span class="token operator">=</span> search_queue<span class="token punctuation">.</span>popleft<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 出列</span>
+        <span class="token keyword">if</span> person <span class="token operator">not</span> <span class="token keyword">in</span> searched<span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># person没有检查过才检查</span>
+            <span class="token keyword">if</span> person_is_seller<span class="token punctuation">(</span>person<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 找到</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span>person <span class="token operator">+</span> <span class="token string">" is a mango seller!"</span><span class="token punctuation">)</span>
+                <span class="token keyword">return</span> <span class="token boolean">True</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true">#没找到</span>
+                search_queue <span class="token operator">+=</span> graph<span class="token punctuation">[</span>person<span class="token punctuation">]</span> <span class="token comment" spellcheck="true"># 把person的朋友加入待查找队列</span>
+                searched<span class="token punctuation">.</span>append<span class="token punctuation">(</span>person<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 将这个人标记为检查过</span>
+    <span class="token keyword">return</span> <span class="token boolean">False</span> <span class="token comment" spellcheck="true"># 都没找到</span>
 
-search("you")</code></pre>
+search<span class="token punctuation">(</span><span class="token string">"you"</span><span class="token punctuation">)</span></code></pre>
 <p>运行时间<br>如果你在你的整个人际关系网中搜索芒果销售商，就意味着你将沿每条边前行（记住，边是从一个人到另一个人的箭头或连接），因此运行时间至少为O (边数)。<br>你还使用了一个队列，其中包含要检查的每个人。将一个人添加到队列需要的时间是固定的，即为O (1)，因此对每个人都这样做需要的总时间为O (人数)。所以，广度优先搜索的运行时间为O (人数 + 边数)，这通常写作O (V + E )，其中V 为顶点（vertice）数，E 为边数。</p>
 
             </div>
@@ -607,29 +607,28 @@ search("you")</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/11/09/guang-du-you-xian-sou-suo-suan-fa/">
+                <a href="/2019/11/09/di-ke-si-te-la-suan-fa/">
                     <div class="card-image">
                         
-                        <img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/gdyx1.png" class="responsive-img" alt="广度优先搜索算法">
+                        <img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/Dijkstra/dijkstra1.png" class="responsive-img" alt="狄克斯特拉算法(Dijkstra's algorithm)">
                         
-                        <span class="card-title">广度优先搜索算法</span>
+                        <span class="card-title">狄克斯特拉算法(Dijkstra's algorithm)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            广度优先搜索算法是一种用于图的查找算法。
+                            狄克斯特拉算法(Dijkstra's algorithm)可用于寻找没有负权回路的单源最短路径。
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-09
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-09
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -642,7 +641,6 @@ search("you")</code></pre>
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -752,7 +750,7 @@ if __name__ == "__main__":
             <br>
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">76.1k</span>&nbsp;字
+                class="white-color">76.6k</span>&nbsp;字
             
             
             
