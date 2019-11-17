@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.chenjianhui.cc/"/>
-  <updated>2019-11-16T12:16:13.403Z</updated>
+  <updated>2019-11-17T13:08:40.720Z</updated>
   <id>https://www.chenjianhui.cc/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>扫雷游戏C语言实现</title>
+    <link href="https://www.chenjianhui.cc/2019/11/17/sao-lei-you-xi-c-yu-yan-ban/"/>
+    <id>https://www.chenjianhui.cc/2019/11/17/sao-lei-you-xi-c-yu-yan-ban/</id>
+    <published>2019-11-17T13:06:16.000Z</published>
+    <updated>2019-11-17T13:08:40.720Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;扫雷游戏C语言实现&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/%E6%89%AB%E9%9B%B7/%E6%89%AB%E9%9B%B71.png&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程技术" scheme="https://www.chenjianhui.cc/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="计算机" scheme="https://www.chenjianhui.cc/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+      <category term="笔记" scheme="https://www.chenjianhui.cc/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="C/C++" scheme="https://www.chenjianhui.cc/tags/C-C/"/>
+    
+  </entry>
   
   <entry>
     <title>《算法图解》读书笔记</title>
@@ -591,37 +623,6 @@
         
         
           &lt;h1 id=&quot;自卑与超越：你要清楚自己应该怎样过好这一生&quot;&gt;&lt;a href=&quot;#自卑与超越：你要清楚自己应该怎样过好这一生&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="读书笔记" scheme="https://www.chenjianhui.cc/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="笔记" scheme="https://www.chenjianhui.cc/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="读书" scheme="https://www.chenjianhui.cc/tags/%E8%AF%BB%E4%B9%A6/"/>
-    
-      <category term="心理学" scheme="https://www.chenjianhui.cc/tags/%E5%BF%83%E7%90%86%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《刻意练习：如何从新手到大师》读书笔记</title>
-    <link href="https://www.chenjianhui.cc/2019/09/18/ke-yi-lian-xi-du-shu-bi-ji/"/>
-    <id>https://www.chenjianhui.cc/2019/09/18/ke-yi-lian-xi-du-shu-bi-ji/</id>
-    <published>2019-09-18T07:10:10.000Z</published>
-    <updated>2019-09-18T07:41:45.543Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;刻意练习：如何从新手到大师&quot;&gt;&lt;a href=&quot;#刻意练习：如何从新手到大师&quot; class=&quot;headerlink&quot; title=&quot;刻意练习：如何从新手到大师&quot;&gt;&lt;/a&gt;刻意练习：如何从新手到大师&lt;/h1&gt;&lt;p&gt;&lt;img
         
       
     
