@@ -5,8 +5,9 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="NP问题1, 一水之间">
-    <meta name="description" content="NP问题1从1、2、2、3、9、5、5、25这8个数中，选出2个或2个以上的数相乘，可以得到多少个不同的乘积？方法一：针对含1的数组，双重循环求解def getmult(arr): # 含有1的数组
-    lst = {1} # 创建一个">
+    <meta name="description" content="NP问题1从1、2、2、3、9、5、5、25这8个数中，选出2个或2个以上的数相乘，可以得到多少个不同的乘积？
+方法一：针对含1的数组，双重循环求解def getmult(arr): # 含有1的数组
+    lst = {1} # 创建一">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -352,7 +353,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="NP问题1"><a href="#NP问题1" class="headerlink" title="NP问题1"></a>NP问题1</h1><h3 id="从1、2、2、3、9、5、5、25这8个数中，选出2个或2个以上的数相乘，可以得到多少个不同的乘积？"><a href="#从1、2、2、3、9、5、5、25这8个数中，选出2个或2个以上的数相乘，可以得到多少个不同的乘积？" class="headerlink" title="从1、2、2、3、9、5、5、25这8个数中，选出2个或2个以上的数相乘，可以得到多少个不同的乘积？"></a>从1、2、2、3、9、5、5、25这8个数中，选出2个或2个以上的数相乘，可以得到多少个不同的乘积？</h3><h4 id="方法一：针对含1的数组，双重循环求解"><a href="#方法一：针对含1的数组，双重循环求解" class="headerlink" title="方法一：针对含1的数组，双重循环求解"></a>方法一：针对含1的数组，双重循环求解</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">getmult</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 含有1的数组</span>
+                <h1 id="NP问题1"><a href="#NP问题1" class="headerlink" title="NP问题1"></a>NP问题1</h1><h3 id="从1、2、2、3、9、5、5、25这8个数中，选出2个或2个以上的数相乘，可以得到多少个不同的乘积？"><a href="#从1、2、2、3、9、5、5、25这8个数中，选出2个或2个以上的数相乘，可以得到多少个不同的乘积？" class="headerlink" title="从1、2、2、3、9、5、5、25这8个数中，选出2个或2个以上的数相乘，可以得到多少个不同的乘积？"></a>从1、2、2、3、9、5、5、25这8个数中，选出2个或2个以上的数相乘，可以得到多少个不同的乘积？</h3><p><img src="https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/NP%E9%97%AE%E9%A2%981/NP%E9%97%AE%E9%A2%981.svg" alt="图解算法"></p>
+<h4 id="方法一：针对含1的数组，双重循环求解"><a href="#方法一：针对含1的数组，双重循环求解" class="headerlink" title="方法一：针对含1的数组，双重循环求解"></a>方法一：针对含1的数组，双重循环求解</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">getmult</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 含有1的数组</span>
     lst <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">}</span> <span class="token comment" spellcheck="true"># 创建一个集合，含1</span>
     <span class="token keyword">for</span> node <span class="token keyword">in</span> arr<span class="token punctuation">:</span> 
         lst <span class="token operator">=</span> lst <span class="token operator">|</span> set<span class="token punctuation">(</span><span class="token punctuation">[</span>m<span class="token operator">*</span>node <span class="token keyword">for</span> m <span class="token keyword">in</span> lst<span class="token punctuation">]</span><span class="token punctuation">)</span>
