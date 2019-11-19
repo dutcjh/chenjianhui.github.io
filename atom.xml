@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.chenjianhui.cc/"/>
-  <updated>2019-11-17T13:08:40.720Z</updated>
+  <updated>2019-11-19T11:59:50.114Z</updated>
   <id>https://www.chenjianhui.cc/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>扫雷游戏C语言实现</title>
-    <link href="https://www.chenjianhui.cc/2019/11/17/sao-lei-you-xi-c-yu-yan-ban/"/>
-    <id>https://www.chenjianhui.cc/2019/11/17/sao-lei-you-xi-c-yu-yan-ban/</id>
-    <published>2019-11-17T13:06:16.000Z</published>
-    <updated>2019-11-17T13:08:40.720Z</updated>
+    <title>NP问题1</title>
+    <link href="https://www.chenjianhui.cc/2019/11/19/np-wen-ti-1/"/>
+    <id>https://www.chenjianhui.cc/2019/11/19/np-wen-ti-1/</id>
+    <published>2019-11-19T11:27:11.000Z</published>
+    <updated>2019-11-19T11:59:50.114Z</updated>
     
     <summary type="html">
     
@@ -29,8 +29,38 @@
       
         
         
-          &lt;p&gt;扫雷游戏C语言实现&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://skill1-1300242344.cos.ap-beijing.myqcloud.com/computer/%E6%89%AB%E9%9B%B7/%E6%89%AB%E9%9B%B71.png&quot;
+          &lt;h1 id=&quot;NP问题1&quot;&gt;&lt;a href=&quot;#NP问题1&quot; class=&quot;headerlink&quot; title=&quot;NP问题1&quot;&gt;&lt;/a&gt;NP问题1&lt;/h1&gt;&lt;h3
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程技术" scheme="https://www.chenjianhui.cc/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="算法" scheme="https://www.chenjianhui.cc/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="计算机" scheme="https://www.chenjianhui.cc/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+      <category term="Python" scheme="https://www.chenjianhui.cc/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>扫雷游戏C语言实现</title>
+    <link href="https://www.chenjianhui.cc/2019/11/17/sao-lei-you-xi-c-yu-yan-ban/"/>
+    <id>https://www.chenjianhui.cc/2019/11/17/sao-lei-you-xi-c-yu-yan-ban/</id>
+    <published>2019-11-17T13:06:16.000Z</published>
+    <updated>2019-11-17T13:13:15.536Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;扫雷游戏C语言实现&quot;&gt;&lt;a href=&quot;#扫雷游戏C语言实现&quot; class=&quot;headerlink&quot; title=&quot;扫雷游戏C语言实现&quot;&gt;&lt;/a&gt;扫雷游戏C语言实现&lt;/h1&gt;&lt;p&gt;&lt;img
         
       
     
@@ -606,37 +636,6 @@
       <category term="读书" scheme="https://www.chenjianhui.cc/tags/%E8%AF%BB%E4%B9%A6/"/>
     
       <category term="哲学" scheme="https://www.chenjianhui.cc/tags/%E5%93%B2%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《自卑与超越》读书笔记</title>
-    <link href="https://www.chenjianhui.cc/2019/09/19/zi-bei-yu-chao-yue-du-shu-bi-ji/"/>
-    <id>https://www.chenjianhui.cc/2019/09/19/zi-bei-yu-chao-yue-du-shu-bi-ji/</id>
-    <published>2019-09-19T01:40:16.000Z</published>
-    <updated>2019-09-24T08:34:54.280Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;自卑与超越：你要清楚自己应该怎样过好这一生&quot;&gt;&lt;a href=&quot;#自卑与超越：你要清楚自己应该怎样过好这一生&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="读书笔记" scheme="https://www.chenjianhui.cc/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="笔记" scheme="https://www.chenjianhui.cc/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="读书" scheme="https://www.chenjianhui.cc/tags/%E8%AF%BB%E4%B9%A6/"/>
-    
-      <category term="心理学" scheme="https://www.chenjianhui.cc/tags/%E5%BF%83%E7%90%86%E5%AD%A6/"/>
     
   </entry>
   
