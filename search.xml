@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Python PyInstaller安装和使用教程</title>
+      <link href="/2019/12/02/python-pyinstaller-an-zhuang-he-shi-yong-jiao-cheng/"/>
+      <url>/2019/12/02/python-pyinstaller-an-zhuang-he-shi-yong-jiao-cheng/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Python-PyInstaller安装和使用教程"><a href="#Python-PyInstaller安装和使用教程" class="headerlink" title="Python PyInstaller安装和使用教程"></a>Python PyInstaller安装和使用教程</h1><h3 id="安装-PyInstaller"><a href="#安装-PyInstaller" class="headerlink" title="安装 PyInstaller"></a>安装 PyInstaller</h3><p>Python 默认并不包含 PyInstaller 模块，因此需要自行安装 PyInstaller 模块。</p><p>安装 PyInstaller 模块与安装其他 Python 模块一样，使用 pip 命令安装即可。在命令行输入如下命令：</p><pre class=" language-python"><code class="language-python">pip install pyinstaller</code></pre><p>强烈建议使用 pip 在线安装的方式来安装 PyInstaller 模块，不要使用离线包的方式来安装，因为 PyInstaller 模块还依赖其他模块，pip 在安装 PyInstaller 模块时会先安装它的依赖模块。</p><p>运行上面命令，应该看到如下输出结果：</p><pre class=" language-python"><code class="language-python">Successfully installed pyinstaller<span class="token operator">-</span>x<span class="token punctuation">.</span>x<span class="token punctuation">.</span>x</code></pre><p>其中的 x.x.x 代表 PyInstaller 的版本。</p><p>在 PyInstaller 模块安装成功之后，在 Python 的安装目录下的 Scripts(D:\Python\Python36\Scripts) 目录下会增加一个 pyinstaller.exe 程序，接下来就可以使用该工具将 Python 程序生成 EXE 程序了</p><h3 id="PyInstaller生成可执行程序"><a href="#PyInstaller生成可执行程序" class="headerlink" title="PyInstaller生成可执行程序"></a>PyInstaller生成可执行程序</h3><p>PyInstaller 工具的命令语法如下：</p><pre class=" language-python"><code class="language-python">pyinstaller 选项 Python 源文件eg<span class="token punctuation">.</span>pyinstaller <span class="token operator">-</span>F app<span class="token punctuation">.</span>py</code></pre><p>不管这个 Python 应用是单文件的应用，还是多文件的应用，只要在使用 pyinstaller 命令时编译作为程序入口的 Python 程序即可。<br>PyInstaller工具是跨平台的，它既可以在 Windows平台上使用，也可以在 Mac OS X 平台上运行。在不同的平台上使用 PyInstaller 工具的方法是一样的，它们支持的选项也是一样的。</p><p>更多高级用法见官方文档：<a href="http://www.pyinstaller.org/" target="_blank" rel="noopener">http://www.pyinstaller.org/</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机 </tag>
+            
+            <tag> 笔记 </tag>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>有限与无限的游戏-读书笔记</title>
       <link href="/2019/11/26/you-xian-yu-wu-xian-de-you-xi/"/>
       <url>/2019/11/26/you-xian-yu-wu-xian-de-you-xi/</url>
